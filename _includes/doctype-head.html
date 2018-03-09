@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="ws8l7sBhGn9nilOFh9xFQD3Q78vSVcdl1VjnUR8E5DI" />
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    {% if page.desc %}
+    <meta name="description" content="{{ page.desc }}" />
+    {% else %}
+    <meta name="description" content="Reflexology, Indian Head Massage, Hypnotherapy in West Wickham, Bromley, Beckenham, Croydon, Central London" />
+    {% endif %}
+    {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}" />
+    {% else %}
+    <meta name="keywords" content="reflexology, Indian Head Massage, Hypnotherapy, relaxing therapies, sciatica, PMS, migrane, stress, anxiety, relaxation, harmonal issues, pregnancy issues, ADHD, weight gain, weight loss, overcome smoking, overcome phobias, health coaching, life coaching, back pain, MS, bed wetting, night sweats, cancer, West Wickham, Bromley, Croydon, Shirley, central London, reflexology in West Wickham, Indian Head Massage in West Wickham, Hypnotherapy in West Wickham" />
+    {% endif %}
+    {% if site.name %}
+      <meta name="author" content="{{ site.name }}">
+      <meta name="copyright" content="{{ site.name }} {{ site.time | date: '%Y' }}">
+    {% endif %}
+
+    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
+    <!-- Captcha -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>

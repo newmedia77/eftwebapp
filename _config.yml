@@ -1,0 +1,91 @@
+# Site settings
+title: ReflexologyBromley | Reflexology | Indian Head Message | Hypnotherapy
+description: "Reflexology, Indian Head Message and Hypnotherapy in Bromley areas"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://reflexologybromley.co.uk/" # the name of your domain
+logo_url: img/logo-m.png
+
+# Hero
+hero: 
+    hero_img: complementary-therapies-bromley.jpg
+    hero_title: To Book Call 020 8776 1808
+    hero_description: "Reflexology, Indian Head Message and Hypnotherapy"
+
+# Jekyll archive gems
+gems:
+  - jekyll-archives
+
+# Archive settings (see https://github.com/jekyll/jekyll-archives/)
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: 'archive'
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
+
+# List of links in the navigation bar
+navbar-links:
+  Home: ""
+  About: "#about"
+  Treatments: "#treatments"
+  Blog: "blog"
+  Testimonials: "#testimonials"
+  Prices: "#prices"
+  Location: "#location"
+  
+# pretty permalinks 
+permalink: pretty
+
+# Contact form
+api_token: 15243008e577990654feeb123c4d0c8d
+
+# Contact info
+contact:
+    phone: 020 8776 1808
+    mobile: 07521 378 701
+    email: contact@reflexologybromley.co.uk
+    address: Available at 9 North Road, West Wickham BR4 0JS West Wickham & Home visits
+
+# Opening hours
+monday_friday: 9:00 – 20:00
+saturday: 09:00 – 17:00
+sunday: On request
+
+# Testimonials
+testimonials:
+    testimonials_img: parallax.jpg
+
+# Map
+map:
+    zoom: 17
+    address: 9 North Road, West Wickham, BR4 0JS
+    address_details: svg/min/logo.svg
+
+# Social settings
+facebook: http://facebook.com
+twitter: http://twitter.com
+feed: yes
+
+# Footer
+copyright: © 2017 ReflexologyBromley - All rights reserved
+
+# Build settings
+markdown: kramdown
+
+exclude: [
+    package.json,
+    Gruntfile.js,
+    node_modules,
+    .sass-cache,
+    Gemfile,
+    Gemfile.lock,
+    README.md,
+    LICENSE.md
+    .gitignore
+]
+
+# Theme Settings
+analytics: UA-78439117-1
+google_verification:

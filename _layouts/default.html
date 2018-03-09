@@ -1,0 +1,22 @@
+{% include doctype-head.html %}
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <!--[if lt IE 10]>
+        <p class="oldie">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> to better experience this site.</p>
+    <![endif]-->
+
+    {% include header.html %}
+ 
+        {{ content }}
+           
+    {% include footer.html %}
+    
+    {% if site.analytics %}
+        {% include analytics.html %}
+    {% endif %}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC29pzs8yM9f3zrm5lrhew_XZ0AqLMoUTQ"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/js/all.min.js"></script>
+    <script src="{{ site.baseurl }}/js/valform.js"></script>
+    <script src="https://use.fontawesome.com/e9d6143882.js"></script>
+</body>
+</html>

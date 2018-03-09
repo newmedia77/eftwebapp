@@ -1,0 +1,76 @@
+<!-- Start Footer -->
+<footer class="main-footer">
+    <div class="container-fluid">
+
+
+    <div class="col-md-4 col-sm-12 col-xs-12">
+
+    <div class="site-navigation">
+
+       <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="footer-navs" id="footer-navs">
+            <ul class="footer-nav">
+                <li>
+                        {% if page.layout == 'archive' %}
+                        <a class="scroll" href="{{ site.url }}/">Home</a>
+                        {% else %}
+                        <a class="scroll" href="#top">Home</a>
+                        {% endif %}
+                </li>
+                <li>                        
+                        {% if page.layout == 'archive' %}
+                        <a class="scroll" href="{{ site.baseurl }}/#about">About</a>
+                        {% else %}
+                        <a class="scroll" href="{{ site.baseurl }}/#about">About</a>
+                        {% endif %}
+                </li>
+                <li>
+                        {% if page.layout == 'archive' %}
+                        <a class="scroll" href="{{ site.baseurl }}/cookies">Cookies</a>
+                        {% else %}
+                        <a class="scroll" href="{{ site.baseurl }}/cookies">Cookies</a>
+                        {% endif %}
+                </li>
+                <li>
+                        {% if page.layout == 'archive' %}
+                        <a class="scroll" href="{{ site.baseurl }}/terms">Terms</a>
+                        {% else %}
+                        <a class="scroll" href="{{ site.baseurl }}/terms">Terms</a>
+                        {% endif %}
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div>
+
+<div class="col-md-4 col-sm-12 col-xs-12">
+    <div class="site-contact">
+            <i class="fa fa-phone fa-x2"></i>&nbsp;07521 378701
+      <br />
+      <p>Available at 9 North Road, West Wickham BR4 0JS West Wickham &amp; Home visits
+      </p>
+      <p>Bromley, Hayes, Bromley Common, Shortlands, Beckenham, Elmers End, Eden Park, Park Langley, BR4, West Wickham, BR5, Petts Wood, Shirley, South Croydon, Central London</p>
+    </div>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+<img src="/img/registered-mobile-therapist-bromley-croydon-fht-member.jpg">
+</div>
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+        
+        <ul class="social">
+            {% if site.facebook %}<li><a href="{{ site.facebook }}"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a></li>{% endif %}
+            {% if site.twitter %}<li><a href="{{ site.twitter }}"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a></li>{% endif %}
+            {% if site.instagram %}<li><a href="{{ site.instagram }}"><svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg></a></li>{% endif %}
+            {% if site.youtube %}<li><a href="{{ site.youtube }}"><svg class="icon icon-youtube"><use xlink:href="#icon-youtube"></use></svg></a></li>{% endif %}
+            {% if site.skype %}<li><a href="{{ site.skype }}"><svg class="icon icon-skype"><use xlink:href="#icon-skype"></use></svg></a></li>{% endif %}
+            {% if site.feed %}<li><a href="#"><svg class="icon icon-feed"><use xlink:href="#icon-feed"></use></svg></a></li>{% endif %}
+        </ul>
+</div>
+<div class="col-md-12 col-sm-12 col-xs-12">
+        <small>{% if site.copyright %} {{ site.copyright }} {% endif %}</small>
+</div>
+    </div>
+</footer>
+<!-- End Footer -->

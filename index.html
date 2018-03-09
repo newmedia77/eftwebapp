@@ -1,0 +1,283 @@
+---
+layout: default
+---
+
+<!-- Start Hero -->
+<div class="hero" style="background: url('{{ site.baseurl }}/img/{{ site.hero.hero_img }}') no-repeat; background-size: cover;">
+    <div class="hero-content">
+        <div class="container-fluid">
+            <div class="hero-content-inner">
+                <h1>{{ site.hero.hero_title }}</h1>
+                <p>{{ site.hero.hero_description }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        
+        <div class="col-sm-6 col-sm-offset-6 col-md-4 col-md-offset-8 form">
+            <h3><i class="fa fa-envelope-o"><use xlink:href="#fa-envelope-o"></use></i>&nbsp;Make an Appointment</h3>
+            <form id='rb-form' action="https://liveformhq.com/form/33ae87d0-99a7-4f04-be8a-15a5787c01a6" method="POST" accept-charset="utf-8">
+                <div class="form-field">
+                    <input name="name" type="text" placeholder="Name" required>
+                </div>
+                <div class="form-field">
+                    <input name="phone" type="tel" placeholder="Phone" required>
+                </div>
+                <div class="form-field">
+                    <input name="email" type="email" placeholder="Email" required>
+                </div>
+                <div class="form-field">
+                    <textarea name="comments" placeholder="Message" required></textarea>
+                </div>
+                <div class="g-recaptcha" data-sitekey="6LfPWx8UAAAAAAqvmT1AjSsww8YGUQEeVYYACj2H" data-callback="enableSubmit"></div>
+                <input id="form_submit" class="btn btn-default" type="submit" value="Submit" disabled>
+            </form>
+        </div>
+
+    </div>
+</div>
+<!-- End Hero -->
+
+<!-- Start 3 columns -->
+<div class="three-shade-col">
+    <div class="col-sm-4">
+        <i class="fa fa-envelope-o fa-2x"><use xlink:href="#fa-envelope-o"></use></i>
+        <h3>Contact</h3>
+        <ul>
+            {% if site.contact.phone %}<li><strong>Phone:</strong> {{ site.contact.phone }}</li>{% endif %}
+            {% if site.contact.emergency %}<li><strong>Emergency:</strong> {{ site.contact.emergency }}</li>{% endif %}
+        </ul>
+    </div>
+    <div class="col-sm-4">
+        <i class="fa fa-clock-o fa-2x"><use xlink:href="#fa-clock-o"></use></i>
+        <h3>Opening Hours</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Monday – Friday</td>
+                    <td>{{ site.monday_friday }}</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>{{ site.saturday }}</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>{{ site.sunday }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm-4">
+        <i class="fa fa-map-marker fa-2x"><use xlink:href="#fa-map-marker"></use></i>
+        <h3>Location</h3>
+            <p>
+                {{ site.contact.address }}
+            </p>
+    </div>
+</div>
+<!-- End 3 columns -->
+
+<!-- Start About -->
+<div id="about" class="about">
+    <div class="container-fluid">
+        <h2 class="section-title">About</h2>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Complementary therapies in Bromley and Croydon</h3>
+                <p>Are you looking for a reflexology, Indian head massage or Hypnotherapy session with an experienced therapist in Bromley, Croydon and Central London areas?</p>
+
+                <div class="media">
+                    <div class="media-left">
+                        <div class="boxed-icon">
+                            <i class="fa fa-heart fa-2x" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <p>Reflexology is more than just foot massage. It helps balance your mind, body and spirit. Learn more by clicking hereRead more <a href="/reflexology" title="reflexology">here</a></p>
+                    </div>
+                </div>
+
+                <div class="media">
+                    <div class="media-left">
+                        <div class="boxed-icon">
+                            <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <p>Indian Head Massage is an instant stress buster with relaxing properties. It is said to even help promote hair growth. Read more <a href="/massage" title="Massage">here</a></p>
+                    </div>
+                </div>
+
+                <div class="media">
+                    <div class="media-left">
+                        <div class="boxed-icon">
+                            <i class="fa fa-comments fa-2x" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <p>Hypnotherapy, NLP and Coaching is offered with one aim in mind - to get in control of what matters most in your life. Read more <a href="/hypnotherapy" title="hypnotherapy">here</a></p>
+                    </div>
+                </div>
+                <p>You can book a session with me at the clinic in West Wickham High Street or you can choose to book a therapy session in the comfort of your home or office.</p>
+            </div>
+            <div class="col-sm-6">
+                <img src="img/reflexology-head-massage-hypnotherapy.jpg" alt="Reflexology, Indian head massage, Hypnotherapy in Bromley and Croydon areas">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End About -->
+
+<!-- Start Treatments -->
+<div id="treatments" class="treatments">
+    <div class="container-fluid">
+        <h2 class="section-title">Treatments</h2>
+        <div class="row">
+            {% for treatment in site.data.treatments %}
+                <div class="col-sm-6 col-md-4">
+                    <div class="icon-box">
+                        <i class="fa {{ treatment.fa }}"><use xlink:href="#{{ treatment.fa }}"></use></i>
+                        <h4>{{ treatment.title }}</h4>
+                        <p>{{ treatment.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- End Treatments -->
+
+<!-- Start Testimonials -->
+<div id="testimonials" class="testimonials parallax" style="background-image: url('{{ site.baseurl }}/img/{{ site.testimonials.testimonials_img }}');">
+    <div class="overlay-container">
+        <div class="overlay"></div>
+        <div class="container-fluid">
+            <div id="testimonial-carousel">
+                {% for testimonial in site.data.testimonials %}
+                    <div class="testimonial-item">
+                        <i class="fa fa-quote-left fa-2x"><use xlink:href="#icon-quote-left"></use></i>
+                        <blockquote>
+                            <p>{{ testimonial.description }}</p>
+                            <footer>
+                                {{ testimonial.name }}
+                                <small>{{ testimonial.title }}</small>
+                            </footer>
+                        </blockquote>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Testimonials -->
+
+<!-- Start Treatments -->
+<div id="treatments" class="treatments">
+    <div class="container-fluid">
+        <h2 class="section-title">Specialised Reflexology Sessions For</h2>
+
+        <div class="row">
+            {% for special in site.data.special %}
+                <div class="col-sm-6 col-md-6">
+                    <div class="icon-box">
+                        <i class="fa {{ special.fa }}"><use xlink:href="#{{ special.fa }}"></use></i>
+                        <h4>{{ special.title }}</h4>
+                        <p>{{ special.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- End Treatments -->
+
+<!-- Start Prices -->
+<div id="prices" class="prices">
+    <div class="container-fluid">
+        <h2 class="section-title">Prices</h2>
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <p>Areas covered for home and office visit are Bromley, West Wickham, Beckenham and Croydon and central London. An extra charge of £5 applies to each home or office visit. You can choose from the following complementary therapies:</p>
+             
+                    <ul class="prices">
+                      <li><i class="fa fa-check"></i>&nbsp;&nbsp;Reflexology: £40 per 45 minute session</li>
+                      <li><i class="fa fa-check"></i>&nbsp;&nbsp;Indian Head Massage: £40 per 40 minute session</li>
+                      <li><i class="fa fa-check"></i>&nbsp;&nbsp;Reiki: £40 per 45 minutes session</li>
+                      <li><i class="fa fa-check"></i>&nbsp;&nbsp;Hypnotherapy: £65 per 1 hour session</li>
+                    </ul>
+           
+
+                    <p>With vast experience over 15 years, both nationally and internationally, you can be rest assured to receive a top quality session each time. I am a fully qualified, registered and insured therapist with the Federation of Holistic Therapies (FHT). I am also registered with Bromley Council of Therapist.</p>
+
+                    <p>Do you suffer from –</p>
+
+                    <ul>
+                      <li><i class="fa fa-check"></i>Sciatica</li>
+                      <li><i class="fa fa-check"></i>Back pain</li>
+                      <li><i class="fa fa-check"></i>Stress and anxiety</li>
+                      <li><i class="fa fa-check"></i>MS</li>
+                      <li><i class="fa fa-check"></i>PMS</li>
+                      <li><i class="fa fa-check"></i>Sciatica</li>
+                      <li><i class="fa fa-check"></i>IBS</li>
+                      <li><i class="fa fa-check"></i>Bloating</li>
+                      <li><i class="fa fa-check"></i>Leaky Gut</li>
+                      <li><i class="fa fa-check"></i>Migraine</li>
+                      <li><i class="fa fa-check"></i>Back and neck issues</li>
+                      <li><i class="fa fa-check"></i>Fertility</li>
+                      <li><i class="fa fa-check"></i>Constipation</li>
+                      <li><i class="fa fa-check"></i>And other issues</li>
+                    </ul>
+
+                    <p>The above list is not exhaustive. These therapies are targeted to work holistically – on the mind, body and spirit.</p>
+
+                    <p>These therapies complement medical treatments, especially reflexology, which is offered in hospital settings for Cancer patients as an example. </p>
+
+                    <p>You can book a Reflexology, Indian Head Massage, Reiki or NLP session via online booking and making a payment securely or you can call me on 07521 378 701 or 020 8776 1808.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Prices -->
+<!-- Start Area Covered -->
+<div id="areas" class="areas">
+    <div class="container-fluid">
+        <h2 class="section-title">Area Covered</h2>
+            <div class="row">
+                <div class="col-sm-12">
+
+                <p>Areas covered for mobile sessions. Extra charge of £5 per session applies for home or office visit.</p>
+
+                <ul>
+                 <li> <i class="fa fa-check"></i>Shirley</li>
+                 <li> <i class="fa fa-check"></i>West Wickham</li>
+                 <li> <i class="fa fa-check"></i>Hayes</li>
+                 <li> <i class="fa fa-check"></i>Beckenham</li>
+                 <li><i class="fa fa-check"></i>Bromley (BR1, BR2, BR3, BR4)</li>
+                 <li> <i class="fa fa-check"></i>Croydon (CR0)</li>
+                </ul>
+
+                <p>
+                    To book a healing session please call 07521 378 701 or 020 8776 1808
+
+                    BACK PAIN | PMS | STRESS |
+
+                    BOOK A THERAPY SESSION IN BR4 0PY, BR4 0SA, BR4 9LW, BR4 9BG, BR4 9JU, BR4 0DA, BR4 0QT, BR4 0LL, BR4 9NG, BR4 9NH, BR4 0BW, BR4 0HX, BR1 1HP, BR3 3HQ, BR3 3PE, BR3 3LJ CR0 8EQ, CR0 8AL, CR0 8TJ, CR0 5ES, CR0 7LE, CR0 6SJ, BR4 0ND
+                </p>
+
+                <p>A cancellation policy applies to all appointments. Please <a href="terms" title="terms and conditions">click here</a> to see our terms and conditions.</p>
+
+                <p>reflexology, indian head massage, mobile reflexology, reflexology croydon, reflexology Bromley, reflexology, Beckenham, reflexology West Wickham, reflexology kent, reflexology for Pms, reflexology for stress, reflexology for back pain, reflexology sessions deal, reflexology for kids, reflexology for adhd, reflexology for bowel disorder, foot reflexology, reflexology, reflexology for MS, reflexology for gynaecology issues, reflexology for sciatica, relaxing reflexology sessions, professional reflexology sessions, reflexology for arthritis, reflexology for headache, reflexology for migraine, reflexology for depression, reflexology for autism, book a reflexology session, Indian Head Massage, stiff neck, headache, back pain, indian head massage Bromley Kent, West Wickham kent,Beckenham Kent, indian head massage croydon, mobile therapist, complementary therapies at home, relaxation head massage at office, corporate wellbeing, seated massage, chair massage, seated massage bromley, chair massage bromley</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Area Covered -->
+
+<!-- Start Map -->
+<div id="location" class="map" data-zoom="{{ site.map.zoom }}" data-address="{{ site.map.address }}" data-address-details="<img src='{{ site.map.address_details }}'>"></div>
+<!-- End Map -->
